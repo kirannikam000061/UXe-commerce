@@ -1,0 +1,149 @@
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Text to Speech</title>
+  </head>
+  <body class="container mt-5 ">
+    <!-- popup content sttarts here -->
+    <div class="d-none">
+      <h1 class="">Text to Speech</h1>
+      <p class="lead  mt-4">Select Voice</p>
+      <select id="voices" class="form-select bg-secondary "></select>
+      <div class="d-flex mt-4 ">
+        <div>
+          <p class="lead">Volume</p>
+          <input type="range" min="0" max="1" value="1" step="0.1" id="volume" />
+          <span id="volume-label" class="ms-2">1</span>
+        </div>
+        <div class="mx-5">
+          <p class="lead">Rate</p>
+          <input type="range" min="0.1" max="10" value="1" id="rate" step="0.1" />
+          <span id="rate-label" class="ms-2">1</span>
+        </div>
+        <div>
+          <p class="lead">Pitch</p>
+          <input type="range" min="0" max="2" value="1" step="0.1" id="pitch" />
+          <span id="pitch-label" class="ms-2">1</span>
+        </div>
+      </div>
+      <textarea class="form-control bg-dark  mt-5" cols="30" rows="10" placeholder="Type here..."></textarea>
+      <div class="mb-5">
+        <button  class="btn btn-success mt-5 me-3">Start</button>  <!-- id="start" -->
+        <button id="pause" class="btn btn-warning mt-5 me-3">Pause</button>
+        <button id="resume" class="btn btn-info mt-5 me-3">Resume</button>
+        <button id="cancel" class="btn btn-danger mt-5 me-3">Cancel</button>
+      </div>
+    </div>
+    <!-- ends here -->
+    
+    <main>
+      <div class="header--div">
+        <div class="h1">Welcome to our online shopping store. </div></br>
+        <p>Enjoy shopping with us.</p>
+        
+      </div>
+      <div class="filter--Input">
+        <div class="row wrap">
+          <p>Search your items here or us our vice recognition</p>
+          <div>
+            <input type="text" placeholder="Search here...">
+            <a href=""><img src="./img/mic.png" alt=""></a>
+          </div>
+        </div>
+        <div class="row ">
+          <div class="col-lg-1 col-sm-3 mr-2 mb-2"><a href="" class="searchItems">Fan</a></div>
+          <div class="col-lg-1 col-sm-3 mr-2 mb-2"><a href="" class="searchItems">Fan1</a></div>
+          <div class="col-lg-1 col-sm-3 mr-2 mb-2"><a href="" class="searchItems">Fan2</a></div>
+          <div class="col-lg-1 col-sm-3 mr-2 mb-2"><a href="" class="searchItems">Fan3</a></div>
+        </div>
+      </div>
+      
+      <hr class="solid">
+      <div style="position: relative;">
+        <!-- audio button start #F3AE3D #74EB35 #C73333-->
+        <div class="playButton">
+          <button id="start" class="mb-5"><img id="start" src="./img/play-button.png" alt=""></button>
+          <button><img src="./img/plus.png" alt=""></button>
+          <button><img src="./img/minus.png" alt=""></button>
+        </div>
+        <!-- ends here -->
+        <div class="row justify-content-between">
+          <div class="col-12">
+            <div class="h5 mb-3">Related results for your serach..</div>
+          </div>
+          <div class="col-12">
+            <div class="row wrap">
+                <div class="col-6">
+                    <img src="./img/extra3.png" height="500px" class="card-img-top" alt="resto images">
+                </div>
+                <div class="col-6">
+                    <h5 class="h2">Hair brush, pack of four</h5>
+                    <p class="h5">Wooden handle hair brush.</p>
+                    <!-- <a href="./restoDetailsTwo.html" class="btn btn-primary">Go To</a> -->
+                    <img src="./img/star.png" alt=""><br>
+                    <img src="./img/p.png" alt=""><br>
+                    <button class="checkout-Button">Checkout</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <hr class="solid mt-5">
+      <div style="position: relative;">
+        <!-- audio button start #F3AE3D #74EB35 #C73333-->
+        <div class="playButton">
+          <button id="start" class="mb-5"><img id="start" src="./img/play-button.png" alt=""></button>
+          <button><img src="./img/plus.png" alt=""></button>
+          <button><img src="./img/minus.png" alt=""></button>
+        </div>
+        <div class="row justify-content-between">
+          <div class="col-12">
+            <div class="h5 mb-3">Explore more items</div>
+          </div>
+          <div class="card col-xs-12 col-lg-3 m-2">
+            <img src="./img/extra1.png" class="card-img-top" alt="resto images">
+            <div class="card-body">
+              <h5 class="card-title">Sleeping pillow</h5>
+              <p class="card-text">Best Sleeping pillow in Stoke-on-Trent. Checkout details.</p>
+              <!-- <a href="./restoDetailsTwo.html" class="btn btn-primary">Go To</a><br> -->
+              <label for="" class="d-none">Next article.</label>
+            </div>
+          </div>
+          <div class="card col-xs-12 col-lg-3 m-2">
+            <img src="./img/extra2.png" class="card-img-top" alt="resto images">
+            <div class="card-body">
+              <h5 class="card-title">Standard pillow</h5>
+              <p class="card-text">Pack of four with black color on it</p>
+              <!-- <a href="./restoDetailsTwo.html" class="btn btn-primary">Go To</a><br> -->
+              <label for="" class="d-none">Next article.</label>
+            </div>
+          </div>
+          <div class="card col-xs-12 col-lg-3 m-2">
+            <img src="./img/extra3.png" class="card-img-top" alt="resto images">
+            <div class="card-body">
+              <h5 class="card-title">Hair brush, pack of four</h5>
+              <p class="card-text">Wooden handle hair brush.</p>
+              <!-- <a href="./restoDetailsTwo.html" class="btn btn-primary">Go To</a> -->
+            </div>
+          </div>
+        </div>
+        </div>
+     
+      <!-- vice recognision starts here -->
+      <!-- <div>
+        <button onclick="recognition.start()">PRESS ME</button>
+        <h3 id="output">Press the button above</h3>
+        <h3 id="confidence">Confidence Percentage will be shown here</h3>
+      </div>
+      <div>
+        <input type="text" id="test">
+        <input type="button" value="click" onclick="z()"><span id="err"></span>
+      </div> -->
+      <!-- ends here -->
+    </main>
+  </body>
+  <!-- script tag goes here -->
+  <script src="./textToSpeech.js"></script>
+</html>

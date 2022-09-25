@@ -1,0 +1,154 @@
+body{
+    position: relative;
+}
+main{
+    position: relative;
+}
+.playButton {
+    position: absolute;
+    top: 200px;
+    left: -100px;
+    z-index: 1;
+    width: 50px;
+}
+.playButton button{
+    border: none;
+    width: 60px;
+    margin-bottom: 20px;
+}
+.playButton button:hover {
+    transform: scale(1.5);
+}
+.playButton button img{
+    width: 100%;
+}
+.filter--Input {
+    margin-bottom: 50px;
+}
+.filter--Input input {
+    height: 60px;
+    font-size: 18px;
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 50%;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    border-color: #F3AE3D;
+}
+.filter--Input img {
+    width: 60px;
+}
+a.searchItems {
+    border: 2px solid black;
+    padding: 5px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+}
+.card {
+    transition: transform .5s;
+}
+.card:hover {
+    transform: scale(1.5);
+    Box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+    z-index: 1;
+    border-color: #F3AE3D;
+    cursor: pointer;
+}
+.header--div {
+    background-image: url(./img/ng.png);
+    height: 200px;
+    background-size: contain;
+    text-align: center;
+    padding-top: 50px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+button.checkout-Button {
+    background: #F3AE3D;
+    border: navajowhite;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+.articlesColorChange{
+    background-color: black;
+    color: white;
+}
+.labelHighlight{
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+.main-body {
+    position: relative;
+}
+.customeSection {
+    background: #181717;
+    opacity: 0.9;
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: absolute;
+    z-index: 3;
+}
+.customMain{
+    width: 50%;
+    height: 100%;
+    background: white;
+    position: fixed;
+    z-index: 4;
+    right: 0;
+    opacity: 0.9;
+}
+.bottomButton-menu {
+    background: #e7d3d3;
+    opacity: 0.7;
+    width: auto;
+    padding: 20px;
+    position: fixed;
+    z-index: 1;
+    right: 30px;
+    bottom: 30px;
+    border: 2px solid yellow;
+    border-radius: 10px;
+    transition: transform .5s;
+}
+.bottomButton-menu:hover{
+    transform: scale(1.1);
+    Box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%); 
+    border-color: #F3AE3D;
+    cursor: pointer;
+}
+.customs-section {
+    display: flex;
+    justify-content: space-around;
+}
+.custom-items {
+    border: 2px solid orange;
+    background: #7fc4ff;
+    border-radius: 10px;
+    font-size: 22px;
+    transition: transform .5s;
+}
+.custom-items:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+    Box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+}
+.custom-items img {
+    width: 100%;
+}
+.customMain-menus {
+    position: absolute;
+    bottom: 50px;
+}

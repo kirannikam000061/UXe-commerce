@@ -1,0 +1,184 @@
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Text to Speech</title>
+  </head>
+  <body class="">
+    <div class="bottomButton-menu" onclick="openCustomSide()">
+      <label for="opening custom side adjestments menu">Customize website</label>
+    </div>
+    <!-- customization section starts here -->
+    <section class="customeSection">
+      <div class="customMain">
+        <div class="customMain-menus">
+          <div class="row wrap customs-section">
+            <div class="col-2 col-ms-4 mr-2 custom-items"onclick="toggleMode()">
+              <img src="./img/dark-mode.png" alt="">
+              <label for="">Dark or Light Mode</label>
+            </div>
+            <div class="col-2 col-ms-4 mr-2 custom-items"onclick="toggleColor()">
+              <img src="./img/filter.png" alt="">
+              <label for="">Color change for Items</label>
+            </div>
+            <div class="col-2 col-ms-4 mr-2 custom-items"onclick="toggleHighlights()">
+              <img src="./img/marker.png" alt="">
+              <label for="">Highlight Labels</label>
+            </div>
+          </div>
+          <div class="row customs-section mt-3" onclick="openCustomSide()">
+            <div class="col-2 col-ms-4 mr-2 custom-items">
+              <img src="./img/diskette.png" alt="">
+              <label for="">Save</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ends here -->
+    <div class="container mt-5">
+          <!-- popup content sttarts here -->
+    <div class="d-none">
+      <h1 class="">Text to Speech</h1>
+      <p class="lead  mt-4">Select Voice</p>
+      <select id="voices" class="form-select bg-secondary "></select>
+      <div class="d-flex mt-4 ">
+        <div>
+          <p class="lead">Volume</p>
+          <input type="range" min="0" max="1" value="1" step="0.1" id="volume" />
+          <span id="volume-label" class="ms-2">1</span>
+        </div>
+        <div class="mx-5">
+          <p class="lead">Rate</p>
+          <input type="range" min="0.1" max="10" value="1" id="rate" step="0.1" />
+          <span id="rate-label" class="ms-2">1</span>
+        </div>
+        <div>
+          <p class="lead">Pitch</p>
+          <input type="range" min="0" max="2" value="1" step="0.1" id="pitch" />
+          <span id="pitch-label" class="ms-2">1</span>
+        </div>
+      </div>
+      <textarea class="form-control bg-dark  mt-5" cols="30" rows="10" placeholder="Type here..."></textarea>
+      <div class="mb-5">
+        <button  class="btn btn-success mt-5 me-3">Start</button>  <!-- id="start" -->
+        <button id="pause" class="btn btn-warning mt-5 me-3">Pause</button>
+        <button id="resume" class="btn btn-info mt-5 me-3">Resume</button>
+        <button id="cancel" class="btn btn-danger mt-5 me-3">Cancel</button>
+      </div>
+    </div>
+    <!-- ends here -->
+    <div class="main-body">
+      <main>
+        <div class="header--div">
+          <h1 class="h1">Welcome to our online shopping store. </h1></br>
+          <p>Enjoy shopping with us.</p>
+        </div>
+        <div class="filter--Input">
+          <div class="row wrap">
+            <p>Search your items here or us our vice recognition</p>
+            <div>
+              <input type="text" id="searchTxt" placeholder="Search here..." value="" >
+              <button onclick="recognition.start()"><img  src="./img/mic.png" alt=""></button>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-12">
+              <h3 id="confidence">Confidence Percentage will be shown here</h3>
+            </div>
+            <div class="col-lg-1 col-sm-3 mr-2 mb-2"><a href="" class="searchItems">Fan</a></div>
+            <div class="col-lg-1 col-sm-3 mr-2 mb-2"><a href="" class="searchItems">Fan1</a></div>
+            <div class="col-lg-1 col-sm-3 mr-2 mb-2"><a href="" class="searchItems">Fan2</a></div>
+            <div class="col-lg-1 col-sm-3 mr-2 mb-2"><a href="" class="searchItems">Fan3</a></div>
+          </div>
+        </div>
+        
+        <hr class="solid">
+        <div style="position: relative;">
+          <!-- audio button start #F3AE3D #74EB35 #C73333-->
+          <div class="playButton">
+            <button  class="articleSectionOne" class="mb-5"><img src="./img/play-button.png" alt=""></button>
+            <button id="increase"><img src="./img/plus.png" alt=""></button>
+            <button id="decrease"><img src="./img/minus.png" alt=""></button>
+          </div>
+          <!-- ends here -->
+          <div class="row justify-content-between ggg">
+            <div class="col-12">
+              <h2 class="h5 mb-3">Related results for your serach..</h2>
+            </div>
+            <div class="card col-xs-12 col-lg-3 m-2">
+              <img src="./img/fan1.png" class="card-img-top" alt="resto images">
+              <div class="card-body">
+                <h5 class="card-title">Fan 1</h5>
+                <p class="card-text">Wooden outter cover with best quality.</p>
+                <!-- <a href="./restoDetailsTwo.html" class="btn btn-primary">Go To</a><br> -->
+                <label for="" class="d-none">Next div.</label>
+              </div>
+            </div>
+            <div class="card col-xs-12 col-lg-3 m-2">
+              <img src="./img/fan2.png" class="card-img-top" alt="resto images">
+              <div class="card-body">
+                <h5 class="card-title">Fan 2</h5>
+                <p class="card-text">Standard size fan for small flat usage.</p>
+                <!-- <a href="./restoDetailsTwo.html" class="btn btn-primary">Go To</a><br> -->
+                <label for="" class="d-none">Next div.</label>
+              </div>
+            </div>
+            <div class="card col-xs-12 col-lg-3 m-2">
+              <img src="./img/fan3.png" class="card-img-top" alt="resto images">
+              <div class="card-body">
+                <h5 class="card-title">Fan 3</h5>
+                <p class="card-text">Steel framming fam with five top speed.</p>
+                <!-- <a href="./restoDetailsTwo.html" class="btn btn-primary">Go To</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <hr class="solid mt-5">
+        <div style="position: relative;">
+          <!-- audio button start #F3AE3D #74EB35 #C73333-->
+          <div class="playButton">
+            <button class="mb-5"><img class="articleSectionTwo" src="./img/play-button.png" alt=""></button>
+            <button><img src="./img/plus.png" alt=""></button>
+            <button><img src="./img/minus.png" alt=""></button>
+          </div>
+          <div class="row justify-content-between gggg">
+            <div class="col-12">
+              <h2 class="h5 mb-3">Explore more items</h2>
+            </div>
+            <div class="card col-xs-12 col-lg-3 m-2">
+              <img src="./img/extra1.png" class="card-img-top" alt="resto images">
+              <div class="card-body">
+                <h5 class="card-title">Sleeping pillow</h5>
+                <p class="card-text">Best Sleeping pillow in Stoke-on-Trent. Checkout details.</p>
+                <!-- <a href="./restoDetailsTwo.html" class="btn btn-primary">Go To</a><br> -->
+                <label for="" class="d-none">Next div.</label>
+              </div>
+            </div>
+            <div class="card col-xs-12 col-lg-3 m-2">
+              <img src="./img/extra2.png" class="card-img-top" alt="resto images">
+              <div class="card-body">
+                <h5 class="card-title">Standard pillow tytyt</h5>
+                <p class="card-text">Pack of four with black color on it</p>
+                <!-- <a href="./restoDetailsTwo.html" class="btn btn-primary">Go To</a><br> -->
+                <label for="" class="d-none">Next div.</label>
+              </div>
+            </div>
+            <div class="card col-xs-12 col-lg-3 m-2">
+              <img src="./img/extra3.png" class="card-img-top" alt="resto images">
+              <div class="card-body">
+                <h5 class="card-title">Hair brush, pack of four</h5>
+                <p class="card-text">Wooden handle hair brush.</p>
+                <!-- <a href="./restoDetailsTwo.html" class="btn btn-primary">Go To</a> -->
+              </div>
+            </div>
+          </div>
+          </div>
+      </main>
+    </div>
+    </div>
+  </body>
+  <!-- script tag goes here -->
+  <script src="./textToSpeech.js"></script>
+</html>
